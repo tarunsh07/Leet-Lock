@@ -196,7 +196,7 @@ The extension uses `chrome.storage.local` to act as a lightweight NoSQL database
 
 ## Screenshots
 
-> Screenshots will be added soon.
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/fa07ebf7-0ef9-4c10-a8f2-73bba59f2bb3" />
 
 ---
 
