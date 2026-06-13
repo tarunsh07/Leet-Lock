@@ -7,6 +7,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "START_FOCUS") {
         isFocusModeActive = true;
         shouldBlockAI = request.blockAI; 
+        chrome.storage.local.set({ activeFocus: { difficulty: true, tags: true, hints: true, stats: true } });
 
         const timers = request.timers;
 
@@ -21,6 +22,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
     else if (request.action === "END_FOCUS") {
         isFocusModeActive = false;
+        chrome.storage.local.set({ activeFocus: { difficulty: false, tags: false, hints: false, stats: false } });
 
         chrome.alarms.clearAll();
 
@@ -31,6 +33,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
+    chrome.storage.local.get(['activeFocus']).then((result) => {
+        let activeFocus = result.activeFocus || { difficulty: true, tags: true, hints: true, stats: true };
+        if (alarm.name === "UNHIDE_DIFFICULTY") activeFocus.difficulty = false;
+        if (alarm.name === "UNHIDE_TAGS") activeFocus.tags = false;
+        if (alarm.name === "UNHIDE_HINTS") activeFocus.hints = false;
+        if (alarm.name === "UNHIDE_STATS") activeFocus.stats = false;
+        chrome.storage.local.set({ activeFocus: activeFocus });
+    });
 
     chrome.tabs.query({ url: "*://leetcode.com/*" }, (tabs) => {
         tabs.forEach(tab => chrome.tabs.sendMessage(tab.id, { action: alarm.name }));

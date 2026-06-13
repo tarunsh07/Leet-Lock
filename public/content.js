@@ -193,3 +193,14 @@ const observer = new MutationObserver(() => {
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
+
+// Check state on load (for page reloads)
+chrome.storage.local.get(['activeFocus']).then((result) => {
+    if (result.activeFocus) {
+        activeFocus = result.activeFocus;
+        executeHiding();
+        if (activeFocus.difficulty || activeFocus.tags || activeFocus.hints || activeFocus.stats) {
+            createFocusBadge();
+        }
+    }
+});
