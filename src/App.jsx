@@ -168,26 +168,38 @@ function App() {
 
           <div className="timer-row">
             <span>Difficulty</span>
-            <input type="number" className="timer-input" value={timers.difficulty} 
-                   onChange={(e) => handleTimerChange('difficulty', e.target.value)} />
+            <div style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
+              <input type="number" className="timer-input" value={timers.difficulty} 
+                     onChange={(e) => handleTimerChange('difficulty', e.target.value)} />
+              <span style={{fontSize: '11px', color: 'var(--text-secondary)'}}>min.</span>
+            </div>
           </div>
 
           <div className="timer-row">
             <span>Topic Tags</span>
-            <input type="number" className="timer-input" value={timers.tags} 
-                   onChange={(e) => handleTimerChange('tags', e.target.value)} />
+            <div style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
+              <input type="number" className="timer-input" value={timers.tags} 
+                     onChange={(e) => handleTimerChange('tags', e.target.value)} />
+              <span style={{fontSize: '11px', color: 'var(--text-secondary)'}}>min.</span>
+            </div>
           </div>
 
           <div className="timer-row">
             <span>Hints</span>
-            <input type="number" className="timer-input" value={timers.hints} 
-                   onChange={(e) => handleTimerChange('hints', e.target.value)} />
+            <div style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
+              <input type="number" className="timer-input" value={timers.hints} 
+                     onChange={(e) => handleTimerChange('hints', e.target.value)} />
+              <span style={{fontSize: '11px', color: 'var(--text-secondary)'}}>min.</span>
+            </div>
           </div>
 
           <div className="timer-row">
             <span>Acceptance Rate</span>
-            <input type="number" className="timer-input" value={timers.acceptanceRate} 
-                   onChange={(e) => handleTimerChange('acceptanceRate', e.target.value)} />
+            <div style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
+              <input type="number" className="timer-input" value={timers.acceptanceRate} 
+                     onChange={(e) => handleTimerChange('acceptanceRate', e.target.value)} />
+              <span style={{fontSize: '11px', color: 'var(--text-secondary)'}}>min.</span>
+            </div>
           </div>
 
           <div className="timer-row">
