@@ -11,6 +11,8 @@
     <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   </p>
 
+  <h3>🚀 <a href="https://leetlock.netlify.app/">Download Extension Here</a></h3>
+
   <p>
     <a href="#getting-started">Getting Started</a>
     &nbsp;&middot;&nbsp;
@@ -164,11 +166,13 @@ The extension uses `chrome.storage.local` to act as a lightweight NoSQL database
 
 ## Getting Started
 
-### Prerequisites
+**The easiest way to install LeetLock is to download the compiled ZIP file directly from the [official website](https://leetlock.netlify.app/) and skip the build steps.**
+
+### Prerequisites (For Developers)
 - **Node.js** (v18 or higher)
 - **Google Chrome** or any Chromium-based browser (Edge, Brave, Arc)
 
-### Installation
+### Manual Build & Installation
 
 1. **Clone the repository**
    ```bash
