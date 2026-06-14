@@ -189,6 +189,7 @@ const observer = new MutationObserver(() => {
 
     if (activeFocus.difficulty || activeFocus.tags || activeFocus.hints || activeFocus.stats) {
         executeHiding();
+        createFocusBadge();
     }
 });
 
