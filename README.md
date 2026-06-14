@@ -56,8 +56,9 @@ This extension provides a strict, distraction-free environment. By programmatica
 | **Comprehensive Dashboard** | View lifetime sessions, total focus time, and problems solved inside a React-powered popup |
 | **Interactive Analytics** | Beautiful data visualizations using Recharts, including Bar Charts (Focus Trend), Line Charts (AI Attempts), and Pie Charts (Difficulty) |
 | **Persistent Storage** | Leverages Chrome's `storage.local` API to persistently track and compile analytics across all browser sessions |
+| **State Synchronization** | Service Workers use asynchronous message passing to guarantee focus state persists across page reloads and isolated DOM environments |
 | **Theme System** | Global CSS Variables architecture featuring a clean, modern Light Mode design system |
-| **Manual Code Splitting** | Vite configuration optimized for Chrome Extensions to ensure the popup loads instantly without large monolithic bundle warnings |
+| **Manual Code Splitting** | Custom Rollup manual chunking isolates vendor libraries, optimizing browser caching and parallel load times |
 
 ---
 
