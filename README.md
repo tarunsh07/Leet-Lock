@@ -1,6 +1,6 @@
 <div align="center">
   <img src="public/logo.png" alt="LeetLock Logo" width="250" />
-  <h1>LeetLock — Ultimate Focus Mode for LeetCode</h1>
+  <h1>LeetLock - Ultimate Focus Mode for LeetCode</h1>
   <p><strong>A robust Chrome Extension that enforces distraction-free coding, hides solution-biasing UI elements, and blocks AI cheating tools.</strong></p>
 
   <p>
